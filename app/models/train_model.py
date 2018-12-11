@@ -16,6 +16,7 @@ from ..utils import files as files_utils
 
 def train(path_to_dataset, version_id):
     data = pd.read_csv(path_to_dataset)
+    #data = pd.DataFrame(np.random.randint(0,100,size=(1000, 5)), columns=["x_1","x_2","x_3","x_4","target"])
 
     # split into training and validation
     training_set, validation_set = _split_dataset(data, 0.25, 1)
